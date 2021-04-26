@@ -1,0 +1,23 @@
+{
+  "name": "extensio-cli",
+  "version": "1.0.0",
+  "description": "A cli to start extension development in seconds",
+  "main": "index.js",
+  "bin": {
+    "extensio-cli": "bin/extensio-cli"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Farhan Yahaya",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "inquirer": "^8.0.0",
+    "listr": "^0.14.3",
+    "pkg-install": "^1.0.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

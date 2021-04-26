@@ -1,0 +1,28 @@
+{
+    "name": "<%= name %>",
+    "manifest_version": 2,
+    "version": "1.0.0", <% if(arrayHas(parts, BACKGROUND)){ %>
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    }, <% } %>
+    "browser_action":{ <% if(arrayHas(parts, POPUP)){%>
+        "default_popup": "popup.html" <%}%>
+    }, <% if(arrayHas(parts, POPUP)){%>
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "contentscript.js"
+            ]
+        }
+    ], <%}%>
+    "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    }
+}
